@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Our Team related links -->
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Girassol&display=swap" rel="stylesheet"> 
+        
+        <!-- Google Font for class="MemberName" -->
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+
+        
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;500&display=swap" rel="stylesheet">
+    <!-- Cybertronix CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:902px)" href="css/mobile.css">
+    <script src="show-on-scroll.js"></script>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- About Us Section Animation  -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel = "icon" href ="images/cybertronix_logo.jpg" type = "image/x-icon">
+
+
+    <title>Welcome to Cybertronix | Cybertronix.in</title>
+</head>
+
+<body onload="loaderFun()">
+    <!--Pre:loader-->
+    <div id="loader_bg">
+        <div class="loader"></div>
+    </div>
+    <!--NavBar-->
+    <nav id="navbar">
+        <!--This is Navigation Bar-->
+        <input type="checkbox" id="nav-toggle">
+        <div id="logo">
+            <img src="images/cybertronix_logo.jpg" alt="cybertronix.com">
+            <h3>CYBERTRONIX</h3>
+        </div>
+        <ul>
+            <li class="a"><a class="Home active" href="#Home">Home</a></li>
+            <li><a class="AboutUs" href="#AboutUs">About Us</a></li>
+            <li><a class="Activity" href="#Activity">Clubs</a></li>
+            <li><a class="Team" href="#Team">Team</a>
+                <!-- <ul>
+                    <li><a href="#Team">Current Members</a></li>
+                    <li><a href="#">Previous Members</a></li>
+
+                </ul> -->
+            </li>
+            <li><a class="ContactUs" href="#ContactUs">Contact Us</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    
+    <!--Home-->
+    <section id="Home">
+        <div class="row">
+            <a href="#" class="intro-banner-vdo-play-btn pinkBg" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="glyphicon glyphicon-play whiteText" aria-hidden="true"><i class="fas fa-bell" style="color:black;"></i>
+        <span class="ripple pinkBg"><i class="fas fa-bell" style="color:black;"></i></i></span>
+        <span class="ripple pinkBg"><i class="fas fa-bell" style="color:black;"></i></span>
+        <span class="ripple pinkBg"><i class="fas fa-bell" style="color:black;"></i></span>
+        </a>
+            </div>
+        <div id="particles-js" style="height: 600px;" >  
+
+            <div class="welcome overlay ">
+                <p id="p1">WELCOME TO</p>
+                <p data-text="CYBERTRONIX" id="p2">
+                    CYBERTRONIX
+                </p>
+                <div class="underline"></div>
+                <p id="p3">AN INITIATIVE BY</p>
+                <p id="p4">TECHNO INDIA HOOGHLY</p>
+                
+            </div>
+        </div>
+        <script src="particle.js"></script>
+        <script src="app.js"></script>
+        
+        <!-- Carousel -->
+        <div class="imgcontainer">
+            <div class="slideshowcontainer">
+                <div class="leftArrow" onclick="plusSlides(-1)"> <span class="arrow arrowLeft"></span> </div>
+                <div class="rightArrow" onclick="plusSlides(1)"> <span class="arrow arrowRight"></span> </div>
+                <div class="imageholder">
+                    <img src="images/C1.jpg"alt="College Logo">
+                </div>
+                <div class="imageholder">
+                    <img src="images/C2.jpg" alt="College">    
+                </div>
+                <div class="imageholder">
+                    <img src="images/C3.jpg" alt="spark quest">
+                </div>
+                <div class="imageholder">
+                    <img src="images/C4.jpg" alt="CybertronixLogo">
+                </div>
+            </div>
+            <div id="dotsContainer"></div>
+        </div>
+        <script src="Carousel.js"></script>
+    </section>
+<!-- About Us Section  -->
+    <section id="AboutUs">
+        <div>
+            <h1 class="Heading">
+                <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span>
+                <span>U</span><span>s</span>
+            </h1>
+                <div class="center">
+                   <p>The Official Technology club of Techno India Hooghly -Cybertronix, was established by <em> Soumyadeep De, Sankhajeet Taran, Ranit Ghosh, Debdutta Das, Uddipan Dey & Tamal Dolui </em>  to inspire and promote thinkings that are beyond classrooms. At present there are approximately 100-150 members in it. </p>
+                 </div>
+                 <div class="Abt_container">
+                    <div class="card">
+                        
+                        <div class="imgBx">
+                            <img src="images/Commencement.jpg" alt="">
+                            <h2>Commencement</h2>
+                        </div>
+                        <div class="content">
+                            <h2>Commencement</h2>
+                            <p>The official Technology Club of Techno India Hooghly -<em>Cybertronix,</em> was established in August 2018. It was established to inspire young minds and to enrich the technical culture inside the College Campus and grow together. Cybertronix has been paving the way for bright and zealous enthusiasts of technology, helping them innovate and create all the while learning important management skills. </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="images/ideation.jpg" alt="">
+                            <h2>Ideation</h2>
+                        </div>
+                        <div class="content">
+                            <h2>Ideation</h2>
+                            <p>With the spirit, to help in growing the futuristic ideas of young minds the club Cybertronix is established and that's led to <em>Spark Quest</em>.The first-ever independent technological fest of our college in 2018. Support flourished through the young minds and Faculty Members making it possible for a first grand Virtual Event. The popularity led to the foundation of our very first website for <em>https://sparkquest.in</em></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="images/Execution.jpg" alt="">
+                            <h2>Execution</h2>
+                        </div>
+                        <div class="content">
+                            <h2>Execution</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus id, cumque animi autem, inventore et accusamus provident odit facilis dignissimos modi sint quo laboriosam, iste molestias? Maxime corrupti optio saepe.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus id, cumque animi autem, inventore et accusamus provident odit facilis dignissimos modi sint quo laboriosam, iste molestias? Maxime corrupti optio saepe.</p>
+                        </div>
+                    </div>
+                </div>
+            <div class="jour_box">
+                <h2>Our Journey</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut quia quibusdam eligendi cumque quas corporis sit cupiditate numquam modi quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur consectetur voluptatem voluptates eaque accusantium sapiente culpa nesciunt, possimus optio voluptatum adipisci animi nisi sunt veritatis deleniti maxime! Quaerat voluptate unde sed dignissimos quae aspernatur numquam vitae sint eligendi, nesciunt tenetur ratione fugiat magni exercitationem est iusto! Numquam quod corrupti deserunt!
+                </p>
+            </div>  
+            <section class="slideshow">
+                <div class="about">
+                    <div class="about-carrousel">
+                        <figure class="shadow"><img src="images/E1.jpg" alt=""></figure>
+                        <figure class="shadow"><img src="images/E2.jpg" alt=""></figure>
+                        <figure class="shadow"><img src="images/E3.jpg" alt=""></figure>
+                        <figure class="shadow"><img src="images/E4.jpg" alt=""></figure>
+                        <figure class="shadow"><img src="images/E5.jpg" alt=""></figure>
+                        <figure class="shadow"><img src="images/E6.jpg" alt=""></figure>
+                        <figure class="shadow"><img src="images/E7.jpg" alt=""></figure>
+                        <figure class="shadow"><img src="images/E8.jpg" alt=""></figure>                            <figure class="shadow"><img src="images/E9.jpg" alt=""></figure>
+                    </div>
+                </div>
+            </section> 
+        </div>         
+    </section>
+    <!--Activity-->
+    <section id="Activity" >
+        <h1 class="Heading">
+            <span>A</span><span>c</span><span>t</span><span>i</span><span>v</span><span>i</span><span>t</span><span>y</span>
+        </h1>
+
+        <!-- We at TIH Part-->
+        <div class="container my-5 " style="padding-top: 30px; padding-bottom:10%;">
+            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                    <h1 class=" display-4 fw-bold lh-1" style="color: red; padding-bottom:40px">We at TIH live with
+                        a strong Team.</h1>
+                    <p class="lead" style="color: red; font-family: Bai Jamjuree;">Our community consists of young energetic team members. We
+                        are always in a mood of helping our college students through vairous activities.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1 p-0 position-relative overflow-hidden ">
+                    <div class="position-lg-absolute top-0 left-0 overflow-hidden">
+                        <img class="d-block rounded-lg-3" src="images/E8.jpg" alt="" width="300px"
+                            height="250px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card Part-->
+
+        <div class="container d-flex align-items-center justify-content-center flex-wrap">
+            <div class="box">
+                <div class="body image-fluid">
+                    <div class="imgContainer"> <img src="images/spark quest event2.jpg" style="object-fit:fill;" alt="spark quest image">
+                    </div>
+                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                        <div>
+                            <h3 class="text-white fs-5" style="font-weight:bolder;">Spark Quest 2.O</h3>
+                            <p class="fs-6 text-white">Born in 2018, with the soulful will of promoting technology,
+                                scientific thinking & innovation.
+                            </p>
+                            
+                        <a type="button" style="border-radius: 12px;" class="btn btn-primary btn-sm" href="https://sparkquest.in" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="body">
+                    <div class="imgContainer"> <img src="images/codechef pic.jpg" style="object-fit:fill;" alt="">
+                    </div>
+                    <div class="content d-flex flex-column align-items-center justify-content-center">
+                        <div>
+                            <h3 class="text-white fs-5" style="font-weight:bolder;">CodeChef TCH Chapter</h3>
+                            <p class="fs-6 text-white ">Codechef TCH Chapter is a competitive programming community
+                                under Codechef Organisation.
+                                The club is formed under Techno India Hooghly College and was started in November 2020.
+                                </p>
+                                <a type="button" style="border-radius: 12px;" class="btn btn-primary btn-sm" href="#AboutUs" >Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <!--Team-->
+    <section id="Team">
+        <div class="OurTeam">
+            <h1 class="Heading">
+                <span>O</span><span>u</span><span>r</span>
+                <span>T</span><span>e</span><span>a</span><span>m</span>
+            </h1>
+        </div>
+        <div class="ContainerOfLeaders">
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/SoumyadeepDe.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">SOUMYADEEP DE</div>
+                <div class="MemberPost">PRESIDENT</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/DebtanuGupta.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">DEBTANU GUPTA</div>
+                <div class="MemberPost">COMP. PROGRAMMING LEAD</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/PrithaDas.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">PRITHA DAS</div>
+                <div class="MemberPost">EVENTS LEAD</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/VishalJaiswal.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">VISHAL JAISWAL</div>
+                <div class="MemberPost">OUTREACH & MEDIA LEAD</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/DipronilDas.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">DIPRONIL DAS</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/JeeteshShaw.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">JEETESH SHAW</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/MamataShee.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">MAMATA SHEE</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/RajendraKumarShaw.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">RAJENDRA KUMAR SHAW</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/RonitSingh.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">RONIT SINGH</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/DeblinaBanerjee.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">DEBLINA BANERJEE</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/DebojyotiDas.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">DEBOJYOTI DAS</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+            <div class="MemberBox">
+                <div class="MemberImage">
+                    <img src="images/AtulKumarGiri.jpg" alt="ErrorLoadingImage">
+                </div>
+                <div class="MemberName">ATUL KUMAR GIRI</div>
+                <div class="MemberPost">EXECUTIVE MEMBER</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Contact Us-->
+    <section id="ContactUs">
+        <h1 class="Heading">
+            <span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span>
+            <span>U</span><span>s</span>
+        </h1>
+        <div class="container_contact animated animatedFadeInUp fadeInUp">
+            <div class="form">
+                <div class="contact-info">
+                    <h3 class="title">Let's get in touch</h3>
+                    <p class="text"> Contact us with the following details. and fillup the form with the details. </p>
+                    <div class="info">
+                        <div class="social-information"><i class="fas fa-map-marker-alt"></i>
+                            <p>Grand Trunk Road Near Khadina More, Dharampur, Chinsurah R S, Chinsurah, West Bengal
+                                712101.</p>
+                        </div>
+                        <div class="social-information"> <i class="fas fa-envelope"></i>
+                            <p> info@technoindiahooghly.org</p>
+                        </div>
+                        <div class="social-information"><i class="fas fa-mobile-alt"></i>
+                            <p>+91 094750 52378 </p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <p>Connect with us :</p>
+                        <div class="social-icons"> <a href="https://www.facebook.com/CodechefTCHChapter"
+                                target="_blank"> <i class="fab fa-facebook-f"></i> </a> <a
+                                href="https://instagram.com/codechef.tch.chapter?igshid=wfu1t9mogkxh" target="_blank">
+                                <i class="fab fa-instagram"></i> </a> <a
+                                href="https://www.linkedin.com/in/codechef-tch-chapter-8909961bb" target="_blank"> <i
+                                    class="fab fa-linkedin-in"></i>
+                            </a> </div>
+                    </div>
+                </div>
+                <div class="contact-info-form"> <span class="circle one"></span> <span class="circle two"></span>
+                    <form  id="contactUsForm">
+                        <h3 class="title">Contact us</h3>
+                        <div class="social-input-containers"> <input type="text" id="Name" name="name" class="input"
+                                placeholder="Name" /> </div>
+                        <div class="social-input-containers"> <input type="email" id="Email" name="email" class="input"
+                                placeholder="Email" /> </div>
+                        <div class="social-input-containers"> <input type="tel" id="Phone" name="phone" class="input"
+                                placeholder="Phone" /> </div>
+                        <div class="social-input-containers textarea"> <textarea name="message" id="Message" class="input"
+                                placeholder="Message"></textarea> </div> 
+                        <button id='insert' type="submit" class="btn btn-light btn-sm" style="color: green;">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop"data-bs-keyboard="false"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">EVENT</h5>
+          
+        </div>
+        <div class="modal-body">
+            <div >
+                <div><h1 class="modaltext">POSTPONDED</h1></div>
+                <img src="images/EVENT1.jpeg"class="center-modal-img image-fluid" ">
+            </div>
+          
+        </div>
+        <div class="modal-footer">
+         <a href="#" >
+          <button type="button" class="btn btn-primary">Comming Soon</button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- TOP BUTTON -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="animated2 fadeInRight"><i class="fas fa-fighter-jet fa-rotate-270"></i></button>
+    <!-- FOOTER -->
+    <div class="bg-red py-6">
+        <div class="row px-3">
+            <h4 style="font-family: Bai Jamjuree; margin-top:1%; margin-bottom: 1%;"> CYBERTRONIX | <img src="images/C1.jpg" height="50px" width="50px" style="margin:auto;border-radius:2px;"><div class="footer-follow"><span
+                style="font-size:small; margin-left: auto; ">Follow Us:</span><a
+                href="https://www.facebook.com/CodechefTCHChapter " class="fab fa-facebook-square text-sm "
+                style="margin-right: 4%; margin-left: 5%; color:white; text-decoration: none; ">
+            </a> <a href="https://www.youtube.com/channel/UCLDY6sPzUCAnBEWL9CIPyuw"
+                class="fab fa-youtube mr-4 text-sm" style="color:white; text-decoration: none; "></a><a
+                href="https://www.linkedin.com/in/codechef-tch-chapter-8909961bb"
+                class="fab fa-linkedin mr-4 text-sm"
+                style="margin-left:4%; color:white; text-decoration: none; "></a></div></h4>
+
+        </div>
+        <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2 " style="font-family: Bai Jamjuree;">Copyright &copy;
+                2021 | Terms of use | Privacy Policy</small>
+        </div>
+        <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2 " style="font-family: Bai Jamjuree;"> &copy; Techno India
+                Hooghly</small>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <script src="main.js"></script>
+    </div>
+    </section>
+    <!--Pre-Loader Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      /*  setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+        }, 1500);*/
+        var preloader = document.getElementById('loader_bg');
+        setTimeout(function loaderFun(){
+            preloader.style.display = 'none';
+        }, 1000);
+        
+    </script>
+    <script>
+        //Firestore Database
+      
+        var firebaseConfig = {
+
+            apiKey: "AIzaSyAGEKbXkujvALeY_M8BAdejb8AVwFNez2g",
+
+            authDomain: "cybertronix-b4cc6.firebaseapp.com",
+
+            projectId: "cybertronix-b4cc6",
+
+            storageBucket: "cybertronix-b4cc6.appspot.com",
+
+            messagingSenderId: "169371462213",
+
+            appId: "1:169371462213:web:e0299669af8246538e912c"
+
+        };
+      
+      
+        // Initialize Firebase
+      
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        //console.log(db);
+        //db.settings({timestampsInSnapshots: true});
+      </script>
+      <script src = "contact.js"></script>
+</body>
+
+</html>
